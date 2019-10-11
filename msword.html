@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MSWORD</title>
+	<script type="text/javascript">
+		function changefont(font)
+		{
+			document.getElementById("pg").style.fontFamily=font;
+		}
+		function changefontsize(fonts)
+		{
+			document.getElementById("pg").style.fontSize=fonts;
+		}
+		function bold()
+		{
+			if(document.getElementById("pg").style.fontWeight!=1000)
+			{
+			document.getElementById("pg").style.fontWeight=1000;
+			document.getElementById("bold").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.fontWeight=400;
+		    	document.getElementById("bold").style.backgroundColor="";
+		    }
+		}
+
+		function italic()
+		{
+			if(document.getElementById("pg").style.fontStyle!="italic")
+			{
+			document.getElementById("pg").style.fontStyle="italic";
+			document.getElementById("italic").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.fontStyle="normal";
+		    	document.getElementById("italic").style.backgroundColor="";
+		    }
+		}
+		function underline()
+		{
+			if(document.getElementById("pg").style.textDecoration != "underline")
+			{
+				document.getElementById("pg").style.textDecoration = "underline";
+				document.getElementById("underline").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.textDecoration = "none";
+		    	document.getElementById("underline").style.backgroundColor="";
+		    }
+		}
+		function aligncenter()
+		{
+			if(document.getElementById("pg").style.textAlign != "center")
+			{
+				document.getElementById("pg").style.textAlign = "center";
+				document.getElementById("AlignCenter").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.textAlign = "";
+		    	document.getElementById("AlignCenter").style.backgroundColor="";
+		    }
+		}
+		function alignleft()
+		{
+			if(document.getElementById("pg").style.textAlign != "left")
+			{
+				document.getElementById("pg").style.textAlign = "left";
+				document.getElementById("AlignLeft").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.textAlign = "";
+		    	document.getElementById("AlignLeft").style.backgroundColor="";
+		    }
+		}
+		function alignright()
+		{
+			if(document.getElementById("pg").style.textAlign != "right")
+			{
+				document.getElementById("pg").style.textAlign = "right";
+				document.getElementById("AlignRight").style.backgroundColor="#B3B6B7";
+		    }
+		    else
+		    {
+		    	document.getElementById("pg").style.textAlign = "";
+		    	document.getElementById("AlignRight").style.backgroundColor="";
+		    }
+		}
+	</script>
+</head>
+<link rel="stylesheet" type="text/css" href="msword.css">
+
+<body>
+	<div id="container">
+		<div id="tools">
+		<select id="fontchange" onchange="changefont(this.value);">
+            <option value="Arial">Arial</option>
+            <option value="Sans Serif">Sans Serif</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Impact">Impact</option>
+            <option value="Bookman">Bookman</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+        <select id="fontsize" onchange="changefontsize(this.value);">
+            <option value="2px">2</option>
+            <option value="4px">4</option>
+            <option value="6px">6</option>
+            <option value="8px">8</option>
+            <option value="10px">10</option>
+            <option value="12px">12</option>
+            <option value="14px">14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+            <option value="22px">22</option>
+            <option value="24px">24</option>
+            <option value="26px">26</option>
+            <option value="28px">28</option>
+            <option value="30px">30</option>
+            <option value="32px">32</option>
+            <option value="34px">34</option>
+            <option value="36px">36</option>
+        </select>
+        <input type="button" id="bold" name="bold" value="B" onclick="bold();">
+        <input type="button" id="italic" name="italic" value="I" onclick="italic();">
+        <input type="button" id="underline" name="underline" value="U" onclick="underline();">
+        <input type="button" id="AlignLeft" name="AlignLeft" value="AlignLeft" onclick="alignleft();">
+        <input type="button" id="AlignCenter" name="AlignCenter" value="AlignCenter" onclick="aligncenter();">
+        <input type="button" id="AlignRight" name="AlignRight" value="AlignRight" onclick="alignright();">
+
+		</div>
+		<div id="page">
+			<textarea id="pg"></textarea>
+		</div>
+	</div>
+
+</body>
+</html>

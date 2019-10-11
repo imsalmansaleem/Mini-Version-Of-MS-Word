@@ -1,0 +1,19 @@
+#container{
+		width: 90vw;
+		height: 90vh;
+	}
+	#tools{
+		border-style: solid;
+		width: 90vw;
+		height: 20vh;
+		background-color: #5D6D7E;
+	}
+	#page{
+		width: 90vw;
+		height: 70vh;
+		background-color: lightgray;
+	}
+	#pg{
+		width: 90vw;
+		height: 76vh;
+	}
