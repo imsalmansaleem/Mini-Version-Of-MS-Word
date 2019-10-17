@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- title -->
 	<title>MSWORD</title>
 	<script type="text/javascript">
+		<!-- font change. -->
 		function changefont(font)
 		{
 			document.getElementById("pg").style.fontFamily=font;
@@ -24,7 +26,7 @@
 		    	document.getElementById("bold").style.backgroundColor="";
 		    }
 		}
-
+<!--  function for italic . -->
 		function italic()
 		{
 			if(document.getElementById("pg").style.fontStyle!="italic")
@@ -38,6 +40,7 @@
 		    	document.getElementById("italic").style.backgroundColor="";
 		    }
 		}
+		<!--  function forunderline . -->
 		function underline()
 		{
 			if(document.getElementById("pg").style.textDecoration != "underline")
@@ -51,6 +54,7 @@
 		    	document.getElementById("underline").style.backgroundColor="";
 		    }
 		}
+		<!--  function for aligncenter . -->
 		function aligncenter()
 		{
 			if(document.getElementById("pg").style.textAlign != "center")
@@ -64,6 +68,7 @@
 		    	document.getElementById("AlignCenter").style.backgroundColor="";
 		    }
 		}
+		<!-- function for alignleft -->
 		function alignleft()
 		{
 			if(document.getElementById("pg").style.textAlign != "left")
@@ -77,6 +82,7 @@
 		    	document.getElementById("AlignLeft").style.backgroundColor="";
 		    }
 		}
+		<!-- function for alignright -->
 		function alignright()
 		{
 			if(document.getElementById("pg").style.textAlign != "right")
