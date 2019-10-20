@@ -1,8 +1,9 @@
-#container{
+#container{	
 		width: 90vw;
 		height: 90vh;
 	}
 	#tools{
+		/* Instead of id, also make use of classes */
 		border-style: solid;
 		width: 90vw;
 		height: 20vh;
